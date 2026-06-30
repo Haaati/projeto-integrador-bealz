@@ -124,11 +124,12 @@ nav a:hover::after {
     font-weight: 600;
     background-size: 150% 150%;
     transition: all 0.4s ease;
+    box-shadow: 0px 4px 15px #692d85;
 }
 
 .btn-primary:hover {
     background-color: #7644E6;
-    transform: translateY(-px);
+    transform: translateY(-2px);
     background-position: 100% 50%;
 }
 
@@ -176,7 +177,12 @@ nav a:hover::after {
 }
 
 .hero-content h1 span {
-    color: #8B5CF6;
+    background: linear-gradient(90deg,
+            #9670e7 0%,
+            #e893eb 55%,
+            #e35df0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero-content p {
@@ -236,6 +242,8 @@ nav a:hover::after {
     background: #171717;
     padding: 20px;
     border-radius: 18px;
+    border: 1px solid #3d3d5a;
+    box-shadow: 0px 4px 15px rgba(94, 28, 155, 0.25);
 }
 
 .project-card small {
@@ -248,13 +256,14 @@ nav a:hover::after {
 
 .project-tag {
     position: absolute;
-    top: 25px;
+    top: -5px;
     right: -15px;
-    background: #8B5CF6;
     padding: 10px 20px;
     border-radius: 50px;
-    font-size: .9rem;
+    font-size: 15px;
     font-weight: 600;
+    background: linear-gradient(to bottom, #a880ff, #ff7cbe);
+    transform: rotate(5deg);
 }
 
 /* =========== sobre =========== */
@@ -297,6 +306,15 @@ nav a:hover::after {
 .sobre-conteudo h2 {
     font-size: 3rem;
     margin-bottom: 20px;
+}
+
+.sobre-conteudo h2 span {
+    background: linear-gradient(90deg,
+            #9670e7 0%,
+            #e690e9 55%,
+            #e280eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .sobre-conteudo p {
@@ -345,6 +363,18 @@ nav a:hover::after {
 .section-title h2 {
     font-size: 2.8rem;
     margin-bottom: 20px;
+}
+
+.section-title h2 span {
+    background: linear-gradient(90deg,
+            /* cria o degradê */
+            #9670e7 0%,
+            #e690e9 55%,
+            #e280eb 100%);
+    -webkit-background-clip: text;
+    /* faz o fundo “entrar dentro da letra” */
+    -webkit-text-fill-color: transparent;
+    /* remove a cor normal da fonte */
 }
 
 .section-title p {

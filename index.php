@@ -77,7 +77,7 @@
                     </div>
 
                     <span class="project-tag">
-                        Brand Kit
+                        ✦ Brand Kit
                     </span>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                 <div class="sobre-conteudo">
                     <span class="section-tag">Sobre</span>
 
-                    <h2>Design estratégico para marcas que querem crescer.</h2>
+                    <h2><span>Design estratégico</span> para marcas que querem crescer.</h2>
 
                     <p>
                         Acredito que uma marca vai muito além de um logotipo.
@@ -122,7 +122,7 @@
                 <div class="section-title">
                     <span class="section-tag">Nossos Serviços</span>
 
-                    <h2>Soluções para sua marca</h2>
+                    <h2>Soluções para <span>sua marca</span></h2>
 
                     <p>
                         Cada projeto é desenvolvido de forma estratégica para fortalecer a identidade da sua marca e
