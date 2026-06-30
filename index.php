@@ -11,7 +11,9 @@
 <body>
     <header>
         <div class="container">
-            <img src="assets/img/logobz.svg" alt="Logo Berenice" class="logo-image">
+            <a href="#hero">
+                <img src="assets/img/logobz.svg" alt="Logo Berenice" class="logo-image">
+            </a>
 
             <nav>
                 <ul>
@@ -27,7 +29,7 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero" id="hero">
             <div class="container">
                 <div class="hero-content">
                     <span class="hero-badge">
@@ -83,7 +85,7 @@
             </div>
         </section>
 
-        <section class="sobre">
+        <section class="sobre" id="sobre">
             <div class="container">
                 <div class="sobre-imagem">
                     <img src="assets/img/sobre.jpg" alt="Foto de Berenice, designer gráfica especializada em identidade visual e branding">
@@ -117,7 +119,7 @@
             </div>
         </section>
 
-        <section class="servicos">
+        <section class="servicos" id="servicos">
             <div class="container">
                 <div class="section-title">
                     <span class="section-tag">Nossos Serviços</span>
@@ -204,11 +206,11 @@
             </div>
         </section>
 
-        <section class="projetos"></section>
+        <section class="projetos" id="projetos"></section>
 
-        <section class="depoimentos"></section>
+        <section class="depoimentos" id="depoimentos"></section>
 
-        <section class="contato"></section>
+        <section class="contato" id="contato"></section>
 
         <footer></footer>
     </main>
