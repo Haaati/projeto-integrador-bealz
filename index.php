@@ -74,8 +74,8 @@
 
                     <div class="project-card">
                         <small>Projeto recente</small>
-                        <h4>Café Bloom</h4>
-                        <p>★★★★★</p>
+                        <h4 style="margin: 8px 0;">Café Bloom</h4>
+                        <p style="font-size: 22px; padding:0px;">★★★★★</p>
                     </div>
 
                     <span class="project-tag">

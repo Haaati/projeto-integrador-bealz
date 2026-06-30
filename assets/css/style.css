@@ -254,7 +254,7 @@ nav a:hover::after {
     left: -20px;
     bottom: 30px;
     background: #171717;
-    padding: 20px;
+    padding: 15px 25px;
     border-radius: 18px;
     border: 1px solid #3d3d5a;
     box-shadow: 0px 4px 15px rgba(94, 28, 155, 0.25);
@@ -262,10 +262,6 @@ nav a:hover::after {
 
 .project-card small {
     color: #A0A0A0;
-}
-
-.project-card h4 {
-    margin: 8px 0;
 }
 
 .project-tag {
