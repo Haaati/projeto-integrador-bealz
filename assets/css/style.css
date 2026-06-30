@@ -12,7 +12,7 @@
 /* =========== geral =========== */
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -48,7 +48,7 @@ h4,
 h5,
 h6 {
     font-family: "Bricolage Grotesque", sans-serif;
-    font-weight: 700;
+    font-weight: 700; 
 }
 
 p {
@@ -61,6 +61,14 @@ section {
     padding: 100px 0;
 }
 
+#hero,
+#sobre,
+#servicos,
+#projetos,
+#contato {
+    scroll-margin-top: 100px;
+}
+
 /* =========== header =========== */
 
 header {
@@ -69,9 +77,12 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
+    /* controla a ordem das camadas dos elementos na página.*/
     background: rgba(13, 13, 13, 0.65);
-    backdrop-filter: blur(12px); /* Filtro de fundo para deixar blur */
-    -webkit-backdrop-filter: blur(12px); /* Suporte para o Safari */
+    backdrop-filter: blur(12px);
+    /* Filtro de fundo para deixar blur */
+    -webkit-backdrop-filter: blur(12px);
+    /* Suporte para o Safari */
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -114,7 +125,8 @@ nav a::after {
 }
 
 /* animação */
-nav a:hover::after { /* :: after significa depois dele, ou seja, depois do elemento a */
+nav a:hover::after {
+    /* :: after significa depois dele, ou seja, depois do elemento a */
     width: 100%;
 }
 
@@ -139,14 +151,15 @@ nav a:hover::after { /* :: after significa depois dele, ou seja, depois do eleme
 /* =========== hero =========== */
 
 .hero {
+    padding-top: 200px;
     background-color: #0D0D0D;
     background-image: radial-gradient(circle at 30% 40%,
-            rgba(123, 47, 247, 0.22) 0%,
+            rgba(90, 38, 173, 0.22) 0%,
             rgba(0, 0, 0, 0.1) 25%,
             transparent 60%);
     background-repeat: no-repeat;
     background-position: 30% 40%;
-    margin-top: 80px;
+    margin-top: 50px;
     padding: 80px 0;
 }
 
@@ -172,7 +185,7 @@ nav a:hover::after { /* :: after significa depois dele, ou seja, depois do eleme
 }
 
 .hero-content h1 {
-    font-size: 4.5rem;
+    font-size: 4.3rem;
     line-height: 1.1;
     margin-bottom: 25px;
 }
@@ -232,7 +245,7 @@ nav a:hover::after { /* :: after significa depois dele, ou seja, depois do eleme
 }
 
 .hero-image img {
-    width: 100%;
+    width: 98%;
     border-radius: 24px;
 }
 
@@ -351,14 +364,19 @@ nav a:hover::after { /* :: after significa depois dele, ou seja, depois do eleme
 
 /* =========== serviços =========== */
 
-.servicos {
-    padding: 100px 0;
-    background: rgba(13, 13, 13, 0.65);
+.divisor {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right,
+            transparent 40%,
+            rgba(144, 93, 255, 0.6) 50%,
+            transparent 60%);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
-.servicos:hover {
-  opacity: 1;
-  transform: translateY(0);
+.servicos {
+    padding: 60px 0;
+    background: rgba(13, 13, 13, 0.65);
 }
 
 .section-title {
@@ -367,8 +385,8 @@ nav a:hover::after { /* :: after significa depois dele, ou seja, depois do eleme
 }
 
 .section-title h2 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
 }
 
 .section-title h2 span {
@@ -398,12 +416,17 @@ nav a:hover::after { /* :: after significa depois dele, ou seja, depois do eleme
 }
 
 .servico-card {
-    width: 370px;
+    width: 340px;
+    /* um pouco menor */
+    min-height: 280px;
+    /* todos terão a mesma altura */
+    display: flex;
+    flex-direction: column;
     background: #11111A;
     border: 1px solid #24243A;
     border-radius: 20px;
-    padding: 30px;
-    transition: 0.2s ease;
+    padding: 24px;
+    transition: .2s ease;
 }
 
 .servico-card:hover {
@@ -425,9 +448,10 @@ nav a:hover::after { /* :: after significa depois dele, ou seja, depois do eleme
 }
 
 .servico-card p {
+    min-height: 90px;
     color: #A8A8B3;
     line-height: 1.7;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .servico-card a {
@@ -457,4 +481,291 @@ nav a:hover::after { /* :: after significa depois dele, ou seja, depois do eleme
     width: 30px;
     height: 30px;
     margin: 0;
+}
+
+/* =========== Projetos =========== */
+
+.projetos {
+    padding: 60px 0;
+    background-image: radial-gradient(circle at 50% 50%,
+            rgba(90, 38, 173, 0.22) 0%,
+            rgba(53, 53, 53, 0.1) 25%,
+            transparent 60%);
+    background-repeat: no-repeat;
+    background-position: 30% 40%;
+    margin-top: 50px;
+    padding: 80px 0;
+}
+
+.projetos-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 70px;
+}
+
+.projetos-header h2 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin: 18px 0 22px;
+}
+
+.projetos-header h2 span {
+    background: linear-gradient(90deg,
+            #9670e7 0%,
+            #e690e9 55%,
+            #e280eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.projetos-header p {
+    color: #A7A7B5;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* GRID */
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+}
+
+/* CARD */
+.projeto-card {
+    background: #11111A;
+    border: 1px solid #24243A;
+    border-radius: 22px;
+    overflow: hidden;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.projeto-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(139, 92, 246, .45);
+    box-shadow: 0 20px 40px rgba(123, 47, 247, .15);
+}
+
+/* IMAGEM */
+.projeto-imagem {
+    height: 240px;
+    overflow: hidden;
+}
+
+.projeto-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s ease;
+}
+
+.projeto-card:hover img {
+    transform: scale(1.05);
+}
+
+/* INFORMAÇÕES */
+
+.projeto-info {
+    padding: 28px;
+}
+
+.categoria {
+    display: inline-block;
+    color: #8B5CF6;
+    font-size: .82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    margin-bottom: 14px;
+}
+
+.projeto-info h3 {
+    color: white;
+    font-size: 1.9rem;
+    margin-bottom: 24px;
+}
+
+/* BOTÃO */
+.btn-case {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: .95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.btn-case span {
+    transition: .25s;
+}
+
+.btn-case:hover {
+    color: #8B5CF6;
+}
+
+.btn-case:hover span {
+    transform: translateX(6px);
+}
+
+/* =========== Botão POP-UP (modal) =========== */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease;
+    z-index: 9999;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Caixa do modal */
+.modal-content {
+    position: relative;
+    width: min(850px, 90%);
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #11111A;
+    border: 1px solid #26263D;
+    border-radius: 24px;
+    padding: 35px;
+    transform: scale(.95);
+    transition: .3s ease;
+    box-shadow: 0 20px 50px rgba(0,0,0,.45);
+}
+
+.modal.active .modal-content{
+    transform: scale(1);
+}
+
+/* Scroll */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Trilho */
+.modal-content::-webkit-scrollbar-track {
+    margin: 20px 0; /* Espaço em cima e embaixo */
+    background: transparent;
+}
+
+/* Indicador */
+.modal-content::-webkit-scrollbar-thumb {
+    background: #292947;
+    border-radius: 20px;
+}
+
+/* Botão fechar */
+.modal-close{
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:#1A1A25;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.modal-close:hover{
+    background:#8B5CF6;
+}
+
+/* Imagem */
+#modal-image{
+    width:100%;
+    height:340px;
+    object-fit:cover;
+    border-radius:18px;
+    margin-bottom:30px;
+}
+
+/* Categoria */
+#modal-category{
+    display:inline-block;
+    color:#8B5CF6;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    font-size:.85rem;
+    font-weight:600;
+    margin-bottom:12px;
+}
+
+/* Título */
+#modal-title{
+    color:white;
+    font-size:2.5rem;
+    margin-bottom:18px;
+}
+
+/* Texto */
+#modal-description{
+    color:#B8B8C5;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+/* Serviços */
+#modal-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.service-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background: rgba(123, 47, 247, 0.12);
+    border: 1px solid rgba(123, 47, 247, 0.25);
+    border-radius: 999px;
+    color: #E7E7F2;
+    font-size: .88rem;
+    font-weight: 500;
+    transition: .25s ease;
+}
+
+.service-chip:hover {
+    background: rgba(123, 47, 247, 0.22);
+    border-color: rgba(139, 92, 246, .45);
+    transform: translateY(-2px);
+}
+
+/* Linha divisória */
+
+.modal-cta{
+    margin-top:40px;
+    padding-top:35px;
+    border-top:1px solid rgba(255,255,255,.08);
+    text-align:center;
+}
+
+.modal-cta h4{
+    color:white;
+    font-size:1.5rem;
+    margin-bottom:12px;
+}
+
+.modal-cta p{
+    color:#B8B8C5;
+    margin-bottom:24px;
+    line-height:1.7;
 }

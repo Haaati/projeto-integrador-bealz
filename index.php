@@ -119,6 +119,8 @@
             </div>
         </section>
 
+        <div class="divisor"></div>
+
         <section class="servicos" id="servicos">
             <div class="container">
                 <div class="section-title">
@@ -135,78 +137,141 @@
                 <div class="servicos-grid">
                     <article class="servico-card">
                         <div class="servico-icon">
-                            <img src="assets/img/logo.svg" alt="Logo">
+                            <img src="assets/icons/logo.svg" alt="Logo">
                         </div>
                         <h3>Logo Simples</h3>
                         <p>
                             Um símbolo forte, único e estratégico que representa a essência da sua marca.
                         </p>
-                        <a href="#">Saiba mais →</a>
+                        <a href="#projetos">Saiba mais →</a>
                     </article>
 
                     <article class="servico-card">
                         <div class="servico-icon">
-                            <img src="assets/img/tipografia.svg" alt="Logo + Tipografia">
+                            <img src="assets/icons/tipografia.svg" alt="Logo + Tipografia">
                         </div>
                         <h3>Logo + Tipografia</h3>
                         <p>
                             Logotipo acompanhado de uma tipografia harmonizada para garantir uma comunicação
                             consistente.
                         </p>
-                        <a href="#">Saiba mais →</a>
+                        <a href="#projetos">Saiba mais →</a>
                     </article>
 
                     <article class="servico-card">
                         <div class="servico-icon">
-                            <img src="assets/img/id.svg" alt="Identidade Visual">
+                            <img src="assets/icons/id.svg" alt="Identidade Visual">
                         </div>
                         <h3>Identidade Visual</h3>
                         <p>
                             Desenvolvimento da identidade da marca com logotipo, paleta de cores e tipografia
                             personalizados.
                         </p>
-                        <a href="#">Saiba mais →</a>
+                        <a href="#projetos">Saiba mais →</a>
                     </article>
 
                     <article class="servico-card">
                         <div class="servico-icon">
-                            <img src="assets/img/brand.svg" alt="Brand Kit">
+                            <img src="assets/icons/brand.svg" alt="Brand Kit">
                         </div>
                         <h3>Brand Kit Completo</h3>
                         <p>
                             Identidade visual completa com aplicações, manual da marca e materiais para uso digital e
                             impresso.
                         </p>
-                        <a href="#">Saiba mais →</a>
+                        <a href="#projetos">Saiba mais →</a>
                     </article>
 
                     <article class="servico-card">
                         <div class="servico-icon">
-                            <img src="assets/img/highlights.svg" alt="Ícones para Destaques">
+                            <img src="assets/icons/destaques.svg" alt="Ícones para Destaques">
                         </div>
                         <h3>Ícones para Destaques</h3>
                         <p>
                             Ícones personalizados para organizar e destacar os stories do Instagram da sua marca.
                         </p>
-                        <a href="#">Saiba mais →</a>
+                        <a href="#projetos">Saiba mais →</a>
                     </article>
 
                     <article class="servico-card">
                         <div class="servico-icon">
-                            <img src="assets/img/posts.svg" alt="Posts para Redes Sociais">
+                            <img src="assets/icons/posts.svg" alt="Posts para Redes Sociais">
                         </div>
-                        <h3>Posts para Redes Sociais</h3>
+                        <h3>Posts para Redes</h3>
                         <p>
                             Templates personalizados para redes sociais, mantendo consistência visual e
                             profissionalismo.
                         </p>
-                        <a href="#">Saiba mais →</a>
+                        <a href="#projetos">Saiba mais →</a>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section class="projetos" id="projetos"></section>
+        <section class="projetos" id="projetos">
+            <div class="container">
+                <!-- Cabeçalho -->
+                <div class="projetos-header">
+                    <span class="section-tag">Portfólio</span>
+                    <h2>
+                        Projetos em <span>destaque</span>
+                    </h2>
+                    <p>
+                        Conheça alguns dos projetos desenvolvidos para fortalecer marcas
+                        através de soluções criativas e estratégicas.
+                    </p>
+                </div>
+
+                <!-- Grid -->
+                <div class="projetos-grid">
+
+                    <!-- Projeto 1 -->
+                    <article class="projeto-card" data-projeto="cafe-bloom">
+                        <div class="projeto-imagem">
+                            <img src="assets/img/projetos/cafe-bloom.jpg" alt="Brand Kit Café Bloom">
+                        </div>
+                        <div class="projeto-info">
+                            <span class="categoria">Brand Kit Completo</span>
+                            <h3>Café Bloom</h3>
+                            <button class="btn-case">
+                                Ver Projeto
+                                <span>→</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 2 -->
+                    <article class="projeto-card" data-projeto="arkh">
+                        <div class="projeto-imagem">
+                            <img src="assets/img/projetos/arkh.jpg" alt="Projeto Arkh">
+                        </div>
+                        <div class="projeto-info">
+                            <span class="categoria">Branding</span>
+                            <h3>Arkh Studio</h3>
+                            <button class="btn-case">
+                                Ver Projeto
+                                <span>→</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 3 -->
+                    <article class="projeto-card" data-projeto="lumina">
+                        <div class="projeto-imagem">
+                            <img src="assets/img/projetos/lumina.jpg" alt="Projeto Lumina">
+                        </div>
+                        <div class="projeto-info">
+                            <span class="categoria">Design de Logotipo</span>
+                            <h3>Lumina Spa</h3>
+                            <button class="btn-case">
+                                Ver Projeto
+                                <span>→</span>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
         <section class="depoimentos" id="depoimentos"></section>
 
@@ -215,6 +280,26 @@
         <footer></footer>
     </main>
 
+    <!-- Modal para exibir detalhes do projeto -->
+    <div class="modal" id="modal">
+
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <img id="modal-image" src="" alt="Projeto">
+            <span id="modal-category"></span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <h4 class="modal-subtitle">Serviços Prestados</h4>
+            <div id="modal-services"></div>
+            <div class="modal-cta">
+                <h4>Gostou deste projeto?</h4>
+                <p>Vamos conversar sobre a identidade visual da sua marca.</p>
+                <a href="#contato" class="btn-primary">Solicitar orçamento →</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
