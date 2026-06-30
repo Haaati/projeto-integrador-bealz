@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Beatriz</title>
+    <title>Portfólio Berenice</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <header>
         <div class="container">
-            <img src="assets/img/logo.svg" alt="Logo Beatriz" class="logo-image">
+            <img src="assets/img/logobz.svg" alt="Logo Berenice" class="logo-image">
 
             <nav>
                 <ul>
@@ -50,15 +50,14 @@
                     </div>
 
                     <div class="hero-stats">
-
                         <div class="stat">
                             <h3>80+</h3>
-                            <span>Projetos entregues</span>
+                            <span>Projetos concluídos</span>
                         </div>
 
                         <div class="stat">
-                            <h3>5</h3>
-                            <span>Anos de experiência</span>
+                            <h3>20+</h3>
+                            <span>Clientes atendidos</span>
                         </div>
 
                         <div class="stat">
@@ -87,7 +86,7 @@
         <section class="sobre">
             <div class="container">
                 <div class="sobre-imagem">
-                    <img src="assets/img/sobre.png" alt="Foto de Beatriz">
+                    <img src="assets/img/sobre.jpg" alt="Foto de Berenice, designer gráfica especializada em identidade visual e branding">
                 </div>
 
                 <div class="sobre-conteudo">
@@ -101,27 +100,18 @@
                         Meu trabalho é desenvolver identidades visuais que representem
                         o seu negócio e criem conexões com o público.
 
-                        Sou Beatriz, designer gráfica especializada em identidade visual
+                        Sou Berenice Zayra, designer gráfica especializada em identidade visual
                         e branding. Busco unir estratégia, criatividade e atenção aos
                         detalhes para criar projetos únicos, pensados para fortalecer
                         marcas e gerar resultados.
                     </p>
 
-                    <div class="sobre-dados">
-                        <div class="dado">
-                            <h3>80+</h3>
-                            <span>Projetos concluídos</span>
-                        </div>
-
-                        <div class="dado">
-                            <h3>20+</h3>
-                            <span>Clientes atendidos</span>
-                        </div>
-
-                        <div class="dado">
-                            <h3>5+</h3>
-                            <span>Áreas de atuação</span>
-                        </div>
+                    <div class="sobre-skills">
+                        <span class="skill">Branding</span>
+                        <span class="skill">Identidade Visual</span>
+                        <span class="skill">Design de Logotipos</span>
+                        <span class="skill">UI Design</span>
+                        <span class="skill">Figma</span>
                     </div>
                 </div>
             </div>
@@ -130,7 +120,7 @@
         <section class="servicos">
             <div class="container">
                 <div class="section-title">
-                    <span>Nossos Serviços</span>
+                    <span class="section-tag">Nossos Serviços</span>
 
                     <h2>Soluções para sua marca</h2>
 
@@ -143,7 +133,7 @@
                 <div class="servicos-grid">
                     <article class="servico-card">
                         <div class="servico-icon">
-                            <img src="assets/icons/logo.svg" alt="Logo">
+                            <img src="assets/img/logo.svg" alt="Logo">
                         </div>
                         <h3>Logo Simples</h3>
                         <p>
@@ -154,7 +144,7 @@
 
                     <article class="servico-card">
                         <div class="servico-icon">
-                            <img src="assets/icons/tipografia.svg" alt="Logo + Tipografia">
+                            <img src="assets/img/tipografia.svg" alt="Logo + Tipografia">
                         </div>
                         <h3>Logo + Tipografia</h3>
                         <p>
@@ -166,7 +156,7 @@
 
                     <article class="servico-card">
                         <div class="servico-icon">
-                            <img src="assets/icons/id.svg" alt="Identidade Visual">
+                            <img src="assets/img/id.svg" alt="Identidade Visual">
                         </div>
                         <h3>Identidade Visual</h3>
                         <p>
@@ -178,7 +168,7 @@
 
                     <article class="servico-card">
                         <div class="servico-icon">
-                            <img src="assets/icons/brand.svg" alt="Brand Kit">
+                            <img src="assets/img/brand.svg" alt="Brand Kit">
                         </div>
                         <h3>Brand Kit Completo</h3>
                         <p>
@@ -190,7 +180,7 @@
 
                     <article class="servico-card">
                         <div class="servico-icon">
-                            <img src="assets/icons/highlights.svg" alt="Ícones para Destaques">
+                            <img src="assets/img/highlights.svg" alt="Ícones para Destaques">
                         </div>
                         <h3>Ícones para Destaques</h3>
                         <p>
@@ -201,7 +191,7 @@
 
                     <article class="servico-card">
                         <div class="servico-icon">
-                            <img src="assets/icons/posts.svg" alt="Posts para Redes Sociais">
+                            <img src="assets/img/posts.svg" alt="Posts para Redes Sociais">
                         </div>
                         <h3>Posts para Redes Sociais</h3>
                         <p>

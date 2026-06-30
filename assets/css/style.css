@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* =========== reset =========== */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,44 +11,49 @@
 
 /* =========== geral =========== */
 
-body{
-    background-color: #0D0D0D;
+body {
+    background-color: #111111;
     color: #FFFFFF;
     font-family: "Inter", sans-serif;
 }
 
-.container{
+.container {
     width: 1200px;
     max-width: 90%;
     margin: auto;
 }
 
-img{
+img {
     max-width: 100%;
     display: block;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Bricolage Grotesque", sans-serif;
     font-weight: 700;
 }
 
-p{
+p {
     font-family: "Inter", sans-serif;
     line-height: 1.7;
     color: #C7C7C7;
 }
 
-section{
+section {
     padding: 100px 0;
 }
 
@@ -62,7 +67,8 @@ header {
     z-index: 1000;
     background: rgba(13, 13, 13, 0.65);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px); /* Safari support */
+    -webkit-backdrop-filter: blur(12px);
+    /* Safari support */
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -83,13 +89,30 @@ nav ul {
 }
 
 nav a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    padding: 5px 0;
     color: #D4D4D4;
     font-weight: 500;
     transition: .3s;
 }
 
-nav a:hover {
-    color: #FFFFFF;
+/* linha escondida */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background: #ffffff;
+    transition: width 0.4s ease;
+}
+
+/* animação */
+nav a:hover::after {
+    width: 100%;
 }
 
 .btn-primary {
@@ -99,16 +122,28 @@ nav a:hover {
     background: linear-gradient(135deg, #7644E6, #e759a0);
     color: #fff;
     font-weight: 600;
-    transition: .3s;
+    background-size: 150% 150%;
+    transition: all 0.4s ease;
 }
 
 .btn-primary:hover {
     background-color: #7644E6;
+    transform: translateY(-px);
+    background-position: 100% 50%;
 }
 
 /* =========== hero =========== */
 
 .hero {
+    background-color: #0D0D0D;
+
+    background-image: radial-gradient(circle at 30% 40%,
+            rgba(123, 47, 247, 0.22) 0%,
+            rgba(0, 0, 0, 0.1) 25%,
+            transparent 60%);
+
+    background-repeat: no-repeat;
+    background-position: 30% 40%;
     margin-top: 80px;
     padding: 80px 0;
 }
@@ -165,7 +200,8 @@ nav a:hover {
 }
 
 .btn-secondary:hover {
-    background: #1A1A1A;
+    background: #3b3b3b;
+    transform: translateY(-2px);
 }
 
 .hero-stats {
@@ -248,9 +284,13 @@ nav a:hover {
 }
 
 .section-tag {
+    padding: 8px 14px;
+    border-radius: 50px;
+    background: rgba(156, 100, 245, 0.12);
+    border: 1px solid rgba(156, 99, 247, 0.25);
     display: inline-block;
-    color: #8B5CF6;
-    font-weight: 600;
+    color: #9b75f3;
+    font-weight: 500;
     margin-bottom: 20px;
 }
 
@@ -265,25 +305,36 @@ nav a:hover {
     margin-bottom: 40px;
 }
 
-.sobre-dados {
+.sobre-skills {
     display: flex;
-    gap: 50px;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
 }
 
-.dado h3 {
-    font-size: 2rem;
-    margin-bottom: 8px;
+.skill {
+    padding: 8px 14px;
+    border-radius: 50px;
+    background: rgba(121, 85, 180, 0.12);
+    border: 1px solid rgba(106, 63, 175, 0.25);
+    color: #d3d3d3;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.2s ease;
+    cursor: default;
 }
 
-.dado span {
-    color: #A0A0A0;
-    font-size: .95rem;
+/* efeito hover leve */
+.skill:hover {
+    background: rgba(123, 47, 247, 0.22);
+    transform: translateY(-2px);
 }
 
 /* =========== serviços =========== */
 
 .servicos {
     padding: 100px 0;
+    background: rgba(13, 13, 13, 0.65);
 }
 
 .section-title {
@@ -307,7 +358,7 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .servico-card {
@@ -316,12 +367,13 @@ nav a:hover {
     border: 1px solid #24243A;
     border-radius: 20px;
     padding: 30px;
-    transition: .3s;
+    transition: 0.2s ease;
 }
 
 .servico-card:hover {
-    transform: translateY(-8px);
-    border-color: #8B5CF6;
+    border: 1px solid #8B5CF6;
+    background: rgba(120, 60, 216, 0.12);
+    border-color: rgba(109, 18, 255, 0.24);
 }
 
 .servico-card img {
@@ -353,19 +405,19 @@ nav a:hover {
 }
 
 .servico-icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background: rgba(139, 92, 246, .15);
     border: 1px solid #8B5CF6;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .servico-icon img {
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     margin: 0;
 }
