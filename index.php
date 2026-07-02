@@ -1,3 +1,9 @@
+<?php
+
+include("conexao.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="PT-BR">
 
@@ -88,7 +94,8 @@
         <section class="sobre" id="sobre">
             <div class="container">
                 <div class="sobre-imagem">
-                    <img src="assets/img/sobre.jpg" alt="Foto de Berenice, designer gráfica especializada em identidade visual e branding">
+                    <img src="assets/img/sobre.jpg"
+                        alt="Foto de Berenice, designer gráfica especializada em identidade visual e branding">
                 </div>
 
                 <div class="sobre-conteudo">
@@ -273,24 +280,235 @@
             </div>
         </section>
 
-        <section class="depoimentos" id="depoimentos"></section>
+        <section class="depoimentos" id="depoimentos">
 
-        <section class="contato" id="contato"></section>
+            <div class="container">
+
+                <div class="depoimentos-header">
+                    <span class="section-tag">Depoimentos</span>
+
+                    <h2>O que dizem os <span>meus clientes</span></h2>
+
+                    <p>
+                        Resultados reais construídos através de estratégia, identidade visual
+                        e um processo de criação colaborativo.
+                    </p>
+                </div>
+
+                <div class="depoimentos-grid">
+                    <!-- Depoimento 1 -->
+                    <article class="depoimento-card">
+                        <div class="estrelas">
+                            ★★★★★
+                        </div>
+
+                        <p class="texto">
+                            "A Berenice entendeu nossa essência desde o primeiro briefing e entregou
+                            uma identidade que nos emociona todos os dias. Nossos clientes
+                            frequentemente nos elogiam pela marca."
+                        </p>
+
+                        <div class="cliente">
+
+                            <img src="assets/img/clientes/camila.jpg" alt="Cliente">
+
+                            <div>
+                                <h4>Ana Rodrigues</h4>
+                                <span>Fundadora · Café Bloom</span>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <!-- Depoimento 2 -->
+                    <article class="depoimento-card">
+                        <div class="estrelas">
+                            ★★★★★
+                        </div>
+
+                        <p class="texto">
+                            "Profissionalismo impecável e olhar estratégico impressionante.
+                            Recebemos exatamente o que precisávamos para posicionar nossa marca."
+                        </p>
+
+                        <div class="cliente">
+                            <img src="assets/img/clientes/marcos.jpg" alt="Cliente">
+                            <div>
+                                <h4>Marcos Oliveira</h4>
+                                <span>Sócio · Arkh Studio</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Depoimento 3 -->
+                    <article class="depoimento-card">
+                        <div class="estrelas">
+                            ★★★★★
+                        </div>
+
+                        <p class="texto">
+                            "Desde que renovamos nossa identidade percebemos um aumento
+                            na percepção de valor da empresa. A marca transmite exatamente
+                            o que buscávamos."
+                        </p>
+
+                        <div class="cliente">
+                            <img src="assets/img/clientes/julia.jpg" alt="Cliente">
+                            <div>
+                                <h4>Julia Santos</h4>
+                                <span>Diretora · Lumina Spa</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contato" id="contato">
+            <div class="container">
+                <!-- Cabeçalho -->
+                <div class="contato-header">
+                    <span class="section-tag">
+                        Contato
+                    </span>
+
+                    <h2>
+                        Vamos tirar seu
+                        <span>projeto do papel?</span>
+                        
+                    </h2>
+
+                    <p> 
+                        Preencha o formulário e entrarei em contato até 24 horas.
+                    </p>
+                    
+                    <!-- Formulário -->
+                    <form class="contato-form" action="criar_leads.php" method="POST">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="nome">Nome</label>
+                                <input type="text" id="nome" name="nome" placeholder="Seu nome completo"
+                                    required>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(41) 99999-9999" required>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="servicos">Serviço</label>
+                                <?php
+                                $sql = "SELECT id, nome_servicos FROM servicos ORDER BY nome_servicos";
+                                $resultado = mysqli_query($conexao, $sql);
+                                ?>
+                                <select name="id" required>
+                                    <option value="">Serviço desejado</option>
+                                    <?php
+                                    while ($row = mysqli_fetch_assoc($resultado)) {
+                                    ?>
+                                        <option value="<?= $row['id'] ?>">
+                                            <?= htmlspecialchars($row['nome_servicos']) ?>
+                                        </option>
+                                    <?php } ?>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="mensagem"> Mensagem </label>
+                            <textarea name="observacao" id="mensagem" rows="7" placeholder="Conte-me sobre seu projeto, objetivos e prazo..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary">
+                            Solicitar orçamento →
+                        </button>
+                    </form>
+                </div>
+                    <!-- Informações -->
+                    <div class="contato-info">
+                        <div class="info-item">
+                            <div class="icone">📧</div>
+                            <div>
+                                <span>Email</span>
+                                <a href="mailto:seuemail@email.com">
+                                    seuemail@email.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="icone">💬</div>
+                            <div>
+                                <span>WhatsApp</span>
+
+                                <a href="#">
+                                    (41) 99999-9999
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="icone">📍</div>
+                            <div>
+                                <span>Atendimento</span>
+                                <strong>
+                                    Online para todo o Brasil
+                                </strong>
+                            </div>
+                        </div>
+
+                        <div class="redes">
+                            <h4>Redes Sociais</h4>
+                            <div class="redes-icons">
+                                <a href="#">Instagram</a>
+                                <a href="#">Behance</a>
+                                <a href="#">LinkedIn</a>
+                            </div>
+                        </div>
+
+                        <div class="contato-box">
+                            <h4>
+                                ✦ㅤDisponível para novos projetos
+                            </h4>
+                            <p>
+                                Estou disponível para desenvolver identidades visuais, logotipos e materiais gráficos para empresas que desejam fortalecer sua marca.
+                            </p>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+        </section>
 
         <footer></footer>
     </main>
 
     <!-- Modal para exibir detalhes do projeto -->
     <div class="modal" id="modal">
-
         <div class="modal-content">
+
             <button class="modal-close">&times;</button>
+
             <img id="modal-image" src="" alt="Projeto">
+
             <span id="modal-category"></span>
+
             <h2 id="modal-title"></h2>
+
             <p id="modal-description"></p>
+
             <h4 class="modal-subtitle">Serviços Prestados</h4>
+
             <div id="modal-services"></div>
+
             <div class="modal-cta">
                 <h4>Gostou deste projeto?</h4>
                 <p>Vamos conversar sobre a identidade visual da sua marca.</p>
