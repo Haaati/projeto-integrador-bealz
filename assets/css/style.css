@@ -484,9 +484,9 @@ nav a:hover::after {
 .projetos {
     padding: 60px 0;
     background-image: radial-gradient(circle at 50% 50%,
-            rgba(90, 38, 173, 0.22) 0%,
-            rgba(53, 53, 53, 0.1) 25%,
-            transparent 60%);
+            rgba(104, 2, 95, 0.22) 0%,
+            rgba(85, 0, 165, 0.1) 30%,
+            transparent 40%);
     background-repeat: no-repeat;
     background-position: 30% 40%;
     margin-top: 50px;
@@ -530,7 +530,7 @@ nav a:hover::after {
 /* CARD */
 .projeto-card {
     background: #11111A;
-    border: 1px solid #24243A;
+    border: 2px solid #25256d;
     border-radius: 22px;
     overflow: hidden;
     transition: .3s ease;
@@ -539,8 +539,8 @@ nav a:hover::after {
 
 .projeto-card:hover {
     transform: translateY(-8px);
-    border-color: rgba(139, 92, 246, .45);
-    box-shadow: 0 20px 40px rgba(123, 47, 247, .15);
+    border-color: rgba(170, 112, 209, 0.45);
+    box-shadow: 0 20px 40px rgba(48, 9, 110, 0.15);
 }
 
 /* IMAGEM */
