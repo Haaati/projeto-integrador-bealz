@@ -4,7 +4,7 @@ include("conexao.php");
 $nome = $_POST["nome"];
 $email = $_POST["email"];
 $telefone = $_POST["telefone"];
-$servicos = $_POST["servicos"];
+$servicos = $_POST["id"];
 $observacao = $_POST["observacao"];
 
 $sql = "INSERT INTO clientes(nome, email, telefone, servicos, observacao) VALUES('$nome', '$email', '$telefone', '$servicos', '$observacao')";
@@ -12,5 +12,6 @@ $sql = "INSERT INTO clientes(nome, email, telefone, servicos, observacao) VALUES
 mysqli_query($conexao, $sql);
 
 header("Location:index.php");
+exit();
 
 ?>
