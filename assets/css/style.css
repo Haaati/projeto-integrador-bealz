@@ -987,7 +987,10 @@ nav a:hover::after {
 }
 
 .contato-header h2 span {
-    background: linear-gradient(90deg, #8B5CF6, #D16BFF);
+    background: linear-gradient(90deg,
+            #9670e7 0%,
+            #e690e9 55%,
+            #e280eb 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -1105,6 +1108,18 @@ nav a:hover::after {
     background: #171722;
     border: 1px solid rgba(139, 92, 246, .35);
     font-size: 1.2rem;
+    transition: .25s ease;
+}
+
+.icone:hover {
+    background: rgba(149, 95, 236, 0.15);
+    border-color: rgba(139, 92, 246, .45);
+}
+
+.icone img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
 }
 
 .info-item span {
@@ -1160,6 +1175,12 @@ nav a:hover::after {
     border-color: #8B5CF6;
     background: rgba(123, 47, 247, .15);
     transform: translateY(-3px);
+}
+
+.redes-icons a img{
+    width:50px;
+    height:50px;
+    object-fit:contain;
 }
 
 /* Card inferior */
@@ -1469,11 +1490,8 @@ nav a:hover::after {
     }
 
     .redes-icons a { 
-        width: auto; 
-        height: auto;
-        padding: 10px 18px;
-        border-radius: 999px;
-        font-size: .8rem;
+        width: 3.5rem; 
+        height: 3.5rem;
     }
 
     .modal-content {
