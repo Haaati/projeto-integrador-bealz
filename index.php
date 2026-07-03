@@ -17,6 +17,8 @@ include("conexao.php");
 <body>
     <header>
         <div class="container">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
             <a href="#hero">
                 <img src="assets/img/logobz.svg" alt="Logo Berenice" class="logo-image">
             </a>
@@ -27,10 +29,19 @@ include("conexao.php");
                     <li><a href="#servicos">Serviços</a></li>
                     <li><a href="#projetos">Projetos</a></li>
                     <li><a href="#contato">Contato</a></li>
+                    <li class="nav-cta-mobile">
+                        <a href="#contato" class="btn-primary">Solicitar orçamento</a>
+                    </li>
                 </ul>
             </nav>
 
-            <a href="#contato" class="btn-primary"> Solicitar orçamento </a>
+            <a href="#contato" class="btn-primary nav-cta-desktop"> Solicitar orçamento </a>
+
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
         </div>
     </header>
 
@@ -364,129 +375,108 @@ include("conexao.php");
             </div>
         </section>
 
-        <section class="contato" id="contato">
-            <div class="container">
-                <!-- Cabeçalho -->
+ <section class="contato" id="contato">
+    <div class="container">
+        <div class="contato-grid">
+            <!-- Coluna esquerda: título + form -->
+            <div class="contato-form-col">
                 <div class="contato-header">
-                    <span class="section-tag">
-                        Contato
-                    </span>
-
+                    <span class="section-tag">Contato</span>
                     <h2>
                         Vamos tirar seu
                         <span>projeto do papel?</span>
-                        
                     </h2>
-
-                    <p> 
-                        Preencha o formulário e entrarei em contato até 24 horas.
-                    </p>
-                    
-                    <!-- Formulário -->
-                    <form class="contato-form" action="criar_leads.php" method="POST">
-                        <div class="form-row">
-                            <div class="input-group">
-                                <label for="nome">Nome</label>
-                                <input type="text" id="nome" name="nome" placeholder="Seu nome completo"
-                                    required>
-                            </div>
-
-                            <div class="input-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="input-group">
-                                <label for="telefone">Telefone</label>
-                                <input type="tel" id="telefone" name="telefone" placeholder="(41) 99999-9999" required>
-                            </div>
-
-                            <div class="input-group">
-                                <label for="servicos">Serviço</label>
-                                <?php
-                                $sql = "SELECT id, nome_servicos FROM servicos ORDER BY nome_servicos";
-                                $resultado = mysqli_query($conexao, $sql);
-                                ?>
-                                <select name="id" required>
-                                    <option value="">Serviço desejado</option>
-                                    <?php
-                                    while ($row = mysqli_fetch_assoc($resultado)) {
-                                    ?>
-                                        <option value="<?= $row['id'] ?>">
-                                            <?= htmlspecialchars($row['nome_servicos']) ?>
-                                        </option>
-                                    <?php } ?>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="input-group">
-                            <label for="mensagem"> Mensagem </label>
-                            <textarea name="observacao" id="mensagem" rows="7" placeholder="Conte-me sobre seu projeto, objetivos e prazo..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn-primary">
-                            Solicitar orçamento →
-                        </button>
-                    </form>
+                    <p>Preencha o formulário e entrarei em contato até 24 horas.</p>
                 </div>
-                    <!-- Informações -->
-                    <div class="contato-info">
-                        <div class="info-item">
-                            <div class="icone">📧</div>
-                            <div>
-                                <span>Email</span>
-                                <a href="mailto:seuemail@email.com">
-                                    seuemail@email.com
-                                </a>
-                            </div>
+
+                <form class="contato-form" action="criar_leads.php" method="POST">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
                         </div>
-
-                        <div class="info-item">
-                            <div class="icone">💬</div>
-                            <div>
-                                <span>WhatsApp</span>
-
-                                <a href="#">
-                                    (41) 99999-9999
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="info-item">
-                            <div class="icone">📍</div>
-                            <div>
-                                <span>Atendimento</span>
-                                <strong>
-                                    Online para todo o Brasil
-                                </strong>
-                            </div>
-                        </div>
-
-                        <div class="redes">
-                            <h4>Redes Sociais</h4>
-                            <div class="redes-icons">
-                                <a href="#">Instagram</a>
-                                <a href="#">Behance</a>
-                                <a href="#">LinkedIn</a>
-                            </div>
-                        </div>
-
-                        <div class="contato-box">
-                            <h4>
-                                ✦ㅤDisponível para novos projetos
-                            </h4>
-                            <p>
-                                Estou disponível para desenvolver identidades visuais, logotipos e materiais gráficos para empresas que desejam fortalecer sua marca.
-                            </p>
+                        <div class="input-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
                         </div>
                     </div>
-            </div>
-        </section>
 
-        </section>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(41) 99999-9999">
+                        </div>
+                        <div class="input-group">
+                            <label for="servicos">Serviço</label>
+                            <?php
+                            $sql = "SELECT id, nome_servicos FROM servicos ORDER BY nome_servicos";
+                            $resultado = mysqli_query($conexao, $sql);
+                            ?>
+                            <select name="id" required>
+                                <option value="">Serviço desejado</option>
+                                <?php while ($row = mysqli_fetch_assoc($resultado)) { ?>
+                                    <option value="<?= $row['id'] ?>">
+                                        <?= htmlspecialchars($row['nome_servicos']) ?>
+                                    </option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea name="observacao" id="mensagem" rows="7" placeholder="Conte-me sobre seu projeto, objetivos e prazo..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary">
+                        Solicitar orçamento →
+                    </button>
+                </form>
+            </div>
+
+            <!-- Coluna direita: info -->
+            <div class="contato-info">
+                <div class="info-item">
+                    <div class="icone">📧</div>
+                    <div>
+                        <span>Email</span>
+                        <a href="mailto:seuemail@email.com">seuemail@email.com</a>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="icone">💬</div>
+                    <div>
+                        <span>WhatsApp</span>
+                        <a href="#">(41) 99999-9999</a>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="icone">📍</div>
+                    <div>
+                        <span>Atendimento</span>
+                        <strong>Online para todo o Brasil</strong>
+                    </div>
+                </div>
+
+                <div class="redes">
+                    <h4>Redes Sociais</h4>
+                    <div class="redes-icons">
+                        <a href="#">Instagram</a>
+                        <a href="#">Behance</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+
+                <div class="contato-box">
+                    <h4>✦ㅤDisponível para novos projetos</h4>
+                    <p>Estou disponível para desenvolver identidades visuais, logotipos e materiais gráficos para empresas que desejam fortalecer sua marca.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
         <footer></footer>
     </main>

@@ -19,6 +19,7 @@ body {
     background-color: #161616;
     color: #FFFFFF;
     font-family: "Inter", sans-serif;
+    overflow-x: hidden;
 }
 
 .container {
@@ -128,6 +129,49 @@ nav a::after {
 nav a:hover::after {
     /* :: after significa depois dele, ou seja, depois do elemento a */
     width: 100%;
+}
+
+/* Menu hambúrguer (mobile) */
+.nav-toggle{
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav-toggle-label{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 30px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.nav-toggle-label span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: .3s ease;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span:nth-child(1){
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span:nth-child(2){
+    opacity: 0;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span:nth-child(3){
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-cta-mobile{
+    display: none;
 }
 
 .btn-primary {
@@ -933,8 +977,6 @@ nav a:hover::after {
     font-size:1.05rem;
     max-width:520px;
     line-height:1.8;
-    display: flex;
-    flex-direction: row;
 }
 
 /* Layout */
@@ -1011,11 +1053,24 @@ nav a:hover::after {
         INFORMAÇÕES
 =========================== */
 
+.contato-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start; /* garante que ambas as colunas comecem no mesmo topo */
+}
+
+.contato-header{
+    margin-bottom: 30px; /* espaço entre título e form, dentro da coluna esquerda */
+}
+
 .contato-info{
+    margin-top: 4.5rem;
     display:flex;
     flex-direction:column;
     gap:26px;
 }
+
 
 .info-item{
     display:flex;
@@ -1159,7 +1214,7 @@ nav a:hover::after {
 
 @media (max-width:992px){
 
-    header .btn-primary{
+    .nav-cta-desktop{
         display:none;
     }
 
@@ -1220,17 +1275,67 @@ nav a:hover::after {
         grid-template-columns:1fr;
     }
 
-    .contato-wrapper{
+    .contato-grid{
         grid-template-columns:1fr;
         gap:50px;
+    }
+
+    .contato-info{
+        margin-top:0;
     }
 
 }
 
 @media (max-width:768px){
 
+    .nav-toggle-label{
+        display: flex;
+    }
+
     nav{
-        display:none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        background: #0D0D0D;
+        border-bottom: 1px solid rgba(255,255,255,.08);
+        transition: max-height .35s ease;
+    }
+
+    .nav-toggle:checked ~ nav{
+        max-height: 400px;
+    }
+
+    nav ul{
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 24px 24px;
+    }
+
+    nav ul li{
+        border-top: 1px solid rgba(255,255,255,.06);
+    }
+
+    nav ul li:first-child{
+        border-top: none;
+    }
+
+    nav a{
+        display: block;
+        padding: 16px 0;
+    }
+
+    .nav-cta-mobile{
+        display: block;
+        padding: 8px 0 4px;
+    }
+
+    .nav-cta-mobile .btn-primary{
+        display: block;
+        width: 100%;
+        text-align: center;
     }
 
     .hero-content h1{
@@ -1286,6 +1391,10 @@ nav a:hover::after {
 
 @media (max-width:576px){
 
+    section{
+        padding:60px 0;
+    }
+
     .logo-image{
         width:80px;
     }
@@ -1300,6 +1409,16 @@ nav a:hover::after {
 
     .hero-badge{
         font-size:.8rem;
+    }
+
+    .hero-stats{
+        gap:24px;
+    }
+
+    .input-group input,
+    .input-group textarea,
+    .input-group select{
+        padding:14px 16px;
     }
 
     .project-card{
@@ -1327,9 +1446,11 @@ nav a:hover::after {
     }
 
     .redes-icons a{
-        width:60px;
-        height:60px;
-        font-size:.7rem;
+        width:auto;
+        height:auto;
+        padding:10px 18px;
+        border-radius:999px;
+        font-size:.8rem;
     }
 
     .modal-content{
