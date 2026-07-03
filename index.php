@@ -310,7 +310,7 @@ include("conexao.php");
                     <!-- Depoimento 1 -->
                     <article class="depoimento-card">
                         <div class="estrelas">
-                            ★★★★★
+                            ★★★★☆
                         </div>
 
                         <p class="texto">
@@ -463,9 +463,10 @@ include("conexao.php");
                 <div class="redes">
                     <h4>Redes Sociais</h4>
                     <div class="redes-icons">
-                        <a href="#">Instagram</a>
-                        <a href="#">Behance</a>
-                        <a href="#">LinkedIn</a>
+                        <a href="#"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
+                        <a href="#"><img src="assets/icons/behance.svg" alt="Behance"></a>
+                        <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                        <a href="#"><img src="assets/icons/whatsapp.svg" alt="WhatsApp"></a>
                     </div>
                 </div>
 
