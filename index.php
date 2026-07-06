@@ -469,9 +469,15 @@ include("config_db/conexao.php");
                         <div class="redes">
                             <h4>Redes Sociais</h4>
                             <div class="redes-icons">
-                                <a href="#"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
-                                <a href="#"><img src="assets/icons/behance.svg" alt="Behance"></a>
-                                <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                                <a href="https://www.instagram.com/hey.bealz" target="_blank" rel="noopener noreferrer"">
+                                    <img src="assets/icons/instagram.svg" alt="Instagram">
+                                </a>
+                                <a href="https://www.behance.net/beatrizkava" target="_blank" rel="noopener noreferrer">
+                                    <img src="assets/icons/behance.svg" alt="Behance">
+                                </a>
+                                <a href="https://www.linkedin.com/in/beatriz-kava" target="_blank" rel="noopener noreferrer">
+                                    <img src="assets/icons/linkedin.svg" alt="LinkedIn">
+                                </a>
                             </div>
                         </div>
 

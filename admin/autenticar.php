@@ -17,7 +17,7 @@ if ($admin && $senha === $admin['senha']) {
     exit;
 } else {
     // login errado
-    $_SESSION['erro_login'] = "Usuário ou senha inválidos.";
+    $_SESSION['erro_login'] = "⚠︎ Usuário ou senha inválidos.";
     header("Location: login.php");
     exit;
 }
