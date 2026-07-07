@@ -1,0 +1,153 @@
+.btn{
+    padding:9px 16px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.2s;
+}
+
+.toolbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    gap:20px;
+}
+
+.search-box{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    max-width:750px;
+    gap: 1rem;
+}
+
+.search-box input{
+    width:100%;
+    padding:12px 16px;
+    background:#15151d;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:12px;
+    color:#fff;
+    font-size:.95rem;
+    outline:none;
+    transition:.2s;
+}
+
+.search-box input:focus{
+    border-color:#8b5cf6;
+}
+
+.btn-search{
+    font-size:.95rem;
+    background:#8b5cf6;
+    color:#fff;
+    font-size:1rem;
+}
+
+.btn-clear{
+    padding-top:12px;
+    font-size:1rem;
+    text-decoration:none;
+    background:#333;
+    color:#fff;
+}
+
+.lead-counter{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#a1a1aa;
+    white-space:nowrap;
+}
+
+.lead-counter strong{
+    color:#fff;
+    font-size:1.1rem;
+}
+
+.table-container{
+    background:#111118;
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:18px;
+    overflow:hidden;
+}
+
+.leads-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.leads-table thead{
+    background:#18181f;
+}
+
+.leads-table th{
+    padding:18px;
+    text-align:left;
+    font-size:.9rem;
+    color:#d4d4d8;
+    font-weight:600;
+}
+
+.leads-table td{
+    padding:18px;
+    color:#f4f4f5;
+    border-top:1px solid rgba(255,255,255,.05);
+}
+
+.leads-table tbody tr{
+    transition:.2s;
+}
+
+.leads-table tbody tr:hover{
+    background:#17171f;
+}
+
+.status-select{
+    padding:8px 12px;
+    background:#1d1d27;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:10px;
+    color:#fff;
+    cursor:pointer;
+    outline:none;
+}
+
+.actions{
+    display:flex;
+    gap:10px;
+}
+
+.btn-details{
+    font-size:1rem;
+    background:#252530;
+    color:#fff;
+}
+
+.btn-details:hover{
+    background:#32323d;
+}
+
+.btn-convert{
+    font-size:1rem;
+    background:linear-gradient(135deg,#7c3aed,#ec4899);
+    color:#fff;
+}
+
+.btn-convert:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(124,58,237,.35);
+}
+
+.btn-save{
+    font-size:1rem;
+    background-color:#3b8824;
+    color:#fff;
+}
+
+.btn-save:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(96, 177, 80, 0.35);
+}

@@ -10,6 +10,7 @@ ADMINISTRADORES
 --    UNIQUE KEY `usuario` (`usuario`)
 --)
 
+-- SENHA: Sql@2026k
 
 
 /* ===========================
@@ -35,17 +36,17 @@ ADMINISTRADORES
 
 
 /* ===========================
-CLIENTES
+leads
 =========================== */
---DROP TABLE IF EXISTS `clientes`;
+--DROP TABLE IF EXISTS `leads`;
 
---CREATE TABLE `clientes` (
+--CREATE TABLE `leads` (
 --    `id` INT NOT NULL AUTO_INCREMENT,
 --    `nome` VARCHAR(100) NOT NULL,
 --    `email` VARCHAR(256) NOT NULL,
 --    `telefone` VARCHAR(14) NOT NULL,
 --    `servicos` INT NOT NULL,
---    `observacao` TEXT NOT NULL,
+--    `mensagem` TEXT NOT NULL,
 --    PRIMARY KEY (`id`),
 --    UNIQUE KEY `email` (`email`),
 --    KEY `servicos_fk_idx` (`servicos`),
@@ -53,3 +54,27 @@ CLIENTES
 --        FOREIGN KEY (`servicos`)
 --        REFERENCES `servicos` (`id`)
 --)
+
+/* ===========================
+clientes
+=========================== */
+--CREATE TABLE clientes (
+--    id INT AUTO_INCREMENT PRIMARY KEY,
+--    nome VARCHAR(100) NOT NULL,
+--    email VARCHAR(150),
+--    telefone VARCHAR(20),
+--    instagram VARCHAR(100),
+--    servico_id INT NOT NULL,
+--    mensagem TEXT,
+--    data_cadastro DATETIME NOT NULL,
+--    data_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+--        ON UPDATE CURRENT_TIMESTAMP,
+--    FOREIGN KEY (servico_id) REFERENCES servicos(id)
+--);
+
+/* ===========================
+Status Cliente
+=========================== */
+--CREATE TABLE status_clientes (
+--    id INT AUTO_INCREMENT PRIMARY KEY,
+--    nome_status NOT NULL,

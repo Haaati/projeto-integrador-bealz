@@ -1,13 +1,13 @@
 <?php
-include("conexao.php");
+include("config_db/conexao.php");
 
 $nome = $_POST["nome"];
 $email = $_POST["email"];
 $telefone = $_POST["telefone"];
 $servicos = $_POST["id"];
-$observacao = $_POST["observacao"];
+$mensagem = $_POST["mensagem"];
 
-$sql = "INSERT INTO clientes(nome, email, telefone, servicos, observacao) VALUES('$nome', '$email', '$telefone', '$servicos', '$observacao')";
+$sql = "INSERT INTO leads (nome, email, telefone, servicos, mensagem) VALUES('$nome', '$email', '$telefone', '$servicos', '$mensagem')";
 
 mysqli_query($conexao, $sql);
 

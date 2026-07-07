@@ -1,0 +1,35 @@
+/* ===========================
+   FONTES
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Bricolage+Grotesque:wght@700&display=swap');
+
+
+/* ===========================
+   RESET
+=========================== */
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body {
+    min-height:100vh;
+    background:#09090b;
+    color:white;
+    font-family:"Inter", sans-serif;
+}
+
+
+/* ===========================
+   CONTEÚDO PRINCIPAL
+=========================== */
+
+.content {
+    margin-left:260px;
+    padding-top:90px;
+    padding:120px 40px 40px;
+}

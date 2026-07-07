@@ -425,7 +425,7 @@ include("config_db/conexao.php");
 
                             <div class="input-group">
                                 <label for="mensagem">Mensagem</label>
-                                <textarea name="observacao" id="mensagem" rows="7" placeholder="Conte-me sobre seu projeto, objetivos e prazo..."></textarea>
+                                <textarea name="mensagem" id="mensagem" rows="7" placeholder="Conte-me sobre seu projeto, objetivos e prazo..."></textarea>
                             </div>
 
                             <button type="submit" class="btn-primary">

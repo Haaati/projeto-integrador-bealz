@@ -1,9 +1,9 @@
 <?php
 
 include("verificar_sessao.php");
-$paginaAtiva = "dashboard";
-$tituloPagina = "Dashboard";
-$subtituloPagina = "Visão geral do CRM";
+$paginaAtiva = "Clientes";
+$tituloPagina = "Clientes";
+$subtituloPagina = "Gerencie todos os clientes cadastrados.";
 ?>
 
 <!DOCTYPE html>
@@ -13,11 +13,11 @@ $subtituloPagina = "Visão geral do CRM";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dashboard</title>
+    <title>Clientes</title>
 
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/sidebar-header.css">
-    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/clientes.css">
 </head>
 
 <body>
