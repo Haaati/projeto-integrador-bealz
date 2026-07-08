@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
-include("../../config_db/conexao.php");
+include("../../../config_db/conexao.php");
 
 header('Content-Type: application/json');
 
@@ -18,6 +18,7 @@ $sql = "SELECT
             leads.data_clientes,
             leads.observacao,
             servicos.nome_servicos AS servico_nome,
+            leads.servicos AS servico_id,
             status_lead.lead_status AS status_nome,
             leads.status_lead AS status_id
         FROM leads

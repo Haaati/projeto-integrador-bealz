@@ -124,9 +124,12 @@ $subtituloPagina = "Gerencie todos os contatos recebidos pela landing page.";
 
                                 <button class="btn btn-save" data-id="<?= $lead['id']; ?>">Salvar</button>
 
+                                <button class="btn btn-delete" data-id="<?= $lead['id']; ?>">Excluir Lead</button>
+
                                 <button class="btn btn-details" data-id="<?= $lead['id']; ?>">Detalhes</button>
 
                                 <button class="btn btn-convert" data-id="<?= $lead['id']; ?>">Converter</button>
+                                
                             </td>
                         </tr>
                     <?php } ?>
@@ -163,6 +166,54 @@ $subtituloPagina = "Gerencie todos os contatos recebidos pela landing page.";
             <br><br>
 
             <button id="btn-fechar-modal">↩ Voltar para lista</button>
+        </div>
+    </div>
+
+    <div id="modal-converter" class="modal-overlay" style="display:none;">
+        <div class="modal-conteudo">
+            <h2>Converter Lead em Cliente</h2>
+
+            <input type="hidden" id="conv-lead-id">
+
+            <label>Nome</label>
+            <input type="text" id="conv-nome" disabled>
+
+            <label for="conv-email">E-mail</label>
+            <input type="email" id="conv-email">
+
+            <label for="conv-telefone">Telefone</label>
+            <input type="text" id="conv-telefone">
+
+            <label for="conv-instagram">Instagram</label>
+            <input type="text" id="conv-instagram" placeholder="@usuario">
+
+            <label for="conv-cpf">CPF</label>
+            <input type="text" id="conv-cpf" placeholder="000.000.000-00">
+
+            <label for="conv-servico">Serviço</label>
+            <select id="conv-servico"></select>
+
+            <label for="conv-sobre">Sobre o cliente</label>
+            <textarea id="conv-sobre" rows="3" placeholder="Descrição, observações sobre esse cliente..."></textarea>
+
+            <label for="conv-proposta">URL da proposta enviada</label>
+            <input type="url" id="conv-proposta" placeholder="https://...">
+
+            <label for="conv-status">Status do cliente</label>
+            <select id="conv-status">
+                <option value="1">Ativo</option>
+                <option value="2">Inativo</option>
+                <option value="3">Pausado</option>
+                <option value="4">Finalizado</option>
+                <option value="5">Aguardando pagamento</option>
+                <option value="6" selected>Proposta enviada</option>
+            </select>
+
+            <br><br>
+
+            <button id="btn-confirmar-converter">Converter em Cliente</button>
+            <button id="btn-fechar-converter">Cancelar</button>
+
         </div>
     </div>
 

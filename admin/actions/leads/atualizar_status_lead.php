@@ -1,6 +1,6 @@
 <?php
 
-include("../../config_db/conexao.php");
+include("../../../config_db/conexao.php");
 
 $id = $_POST['id'];
 $status = $_POST['status_lead'];

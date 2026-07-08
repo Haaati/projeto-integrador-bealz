@@ -1,5 +1,6 @@
 <?php
-include("../../config_db/conexao.php");
+
+include("../../../config_db/conexao.php");
 
 $id = $_POST['id'];
 $observacao = $_POST['observacao'];
