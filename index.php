@@ -575,6 +575,7 @@ include("config_db/conexao.php");
     </div>
 
     <script src="admin/assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
