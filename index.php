@@ -470,7 +470,7 @@ include("config_db/conexao.php");
                             <h4>Redes Sociais</h4>
                             <div class="redes-icons">
                                 <a href="https://www.instagram.com/hey.bealz" target="_blank" rel="noopener noreferrer"">
-                                    <img src="assets/icons/instagram.svg" alt="Instagram">
+                                    <img src=" assets/icons/instagram.svg" alt="Instagram">
                                 </a>
                                 <a href="https://www.behance.net/beatrizkava" target="_blank" rel="noopener noreferrer">
                                     <img src="assets/icons/behance.svg" alt="Behance">
@@ -574,7 +574,7 @@ include("config_db/conexao.php");
         </div>
     </div>
 
-    <script src="assets/js/script.js"></script>
+    <script src="admin/assets/js/script.js"></script>
 </body>
 
 </html>

@@ -14,16 +14,13 @@ $sql = "SELECT
             leads.nome,
             leads.email,
             leads.telefone,
-            leads.mensagem,
             leads.data_clientes,
-            leads.observacao,
+            leads.mensagem,
             servicos.nome_servicos AS servico_nome,
             leads.servicos AS servico_id,
-            status_lead.lead_status AS status_nome,
-            leads.status_lead AS status_id
+            leads.status_lead AS status_nome
         FROM leads
         INNER JOIN servicos ON leads.servicos = servicos.id
-        INNER JOIN status_lead ON leads.status_lead = status_lead.id
         WHERE leads.id = ?";
 
 $stmt = mysqli_prepare($conexao, $sql);

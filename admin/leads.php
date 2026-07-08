@@ -129,7 +129,7 @@ $subtituloPagina = "Gerencie todos os contatos recebidos pela landing page.";
                                 <button class="btn btn-details" data-id="<?= $lead['id']; ?>">Detalhes</button>
 
                                 <button class="btn btn-convert" data-id="<?= $lead['id']; ?>">Converter</button>
-                                
+
                             </td>
                         </tr>
                     <?php } ?>
@@ -201,13 +201,15 @@ $subtituloPagina = "Gerencie todos os contatos recebidos pela landing page.";
 
             <label for="conv-status">Status do cliente</label>
             <select id="conv-status">
-                <option value="1">Ativo</option>
-                <option value="2">Inativo</option>
-                <option value="3">Pausado</option>
-                <option value="4">Finalizado</option>
-                <option value="5">Aguardando pagamento</option>
-                <option value="6" selected>Proposta enviada</option>
+                <option value="1" selected>Proposta enviada</option>
+                <option value="2">Aguardando pagamento</option>
+                <option value="3">Entregue</option>
+                <option value="4">Inativo</option>
+                <option value="5">Ativo</option>
+                <option value="6">Pausado</option>
+                <option value="7">Finalizado</option>
             </select>
+
 
             <br><br>
 
