@@ -68,5 +68,5 @@ try {
 
 } catch (Exception $e) {
     mysqli_rollback($conexao);
-    echo "erro";
+    echo "erro: " . $e->getMessage();
 }
