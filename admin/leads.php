@@ -2,6 +2,7 @@
 
 include("verificar_sessao.php");
 include("../config_db/conexao.php");
+include("config/status.php");
 
 // Verifica se existe pesquisa
 $pesquisa = "";
@@ -13,6 +14,10 @@ if (isset($_GET['pesquisa']) && !empty(trim($_GET['pesquisa']))) {
 }
 // Busca os leads
 $sql = "SELECT * FROM leads $where ORDER BY data_clientes DESC";
+
+// $sql = "SELECT leads.*,servicos.nome AS servico, status_lead.nome AS status_nome FROM leads INNER JOIN servicos ON leads.servico_id = servicos.id
+// INNER JOIN status_lead ON leads.status_id = status_lead.id $where ORDER BY leads.data_cadastro DESC";
+
 $resultado = mysqli_query($conexao, $sql);
 
 // Conta os resultados
@@ -82,6 +87,7 @@ $subtituloPagina = "Gerencie todos os contatos recebidos pela landing page.";
 
                 <tbody>
                     <?php while ($lead = mysqli_fetch_assoc($resultado)) { ?>
+
                         <tr>
                             <td>#<?= $lead['id']; ?></td>
 
@@ -90,21 +96,23 @@ $subtituloPagina = "Gerencie todos os contatos recebidos pela landing page.";
                             <td><?= htmlspecialchars($lead['servicos']); ?></td>
 
                             <td>
-                                <select class="status-select">
-                                    <option value="Novo"
-                                        <?= $lead['status'] == 'Novo' ? 'selected' : ''; ?>>
-                                        Novo
+
+                                <select class="status-select" data-id="<?= $lead['id']; ?>">
+                                    <option value="1"
+                                        <?= $lead['status_lead'] == 1 ? 'selected' : ''; ?>>
+                                        Novo Lead
                                     </option>
 
-                                    <option value="Em contato"
-                                        <?= $lead['status'] == 'Em contato' ? 'selected' : ''; ?>>
-                                        Em contato
+                                    <option value="2"
+                                        <?= $lead['status_lead'] == 2 ? 'selected' : ''; ?>>
+                                        Em Contato
                                     </option>
 
-                                    <option value="Perdido"
-                                        <?= $lead['status'] == 'Perdido' ? 'selected' : ''; ?>>
+                                    <option value="3"
+                                        <?= $lead['status_lead'] == 3 ? 'selected' : ''; ?>>
                                         Perdido
                                     </option>
+
                                 </select>
                             </td>
 
@@ -114,27 +122,51 @@ $subtituloPagina = "Gerencie todos os contatos recebidos pela landing page.";
 
                             <td class="actions">
 
-                                <button class="btn btn-save">
-                                    Salvar
-                                </button>
+                                <button class="btn btn-save" data-id="<?= $lead['id']; ?>">Salvar</button>
 
                                 <button class="btn btn-details" data-id="<?= $lead['id']; ?>">Detalhes</button>
 
-                                <button class="btn btn-convert">
-                                    Converter
-                                </button>
-
-
+                                <button class="btn btn-convert" data-id="<?= $lead['id']; ?>">Converter</button>
                             </td>
-
                         </tr>
-
                     <?php } ?>
-
                 </tbody>
             </table>
         </section>
     </main>
+
+    <div id="modal-detalhes" class="modal-overlay" style="display:none;">
+        <div class="modal-conteudo">
+            <h2>Detalhes do Lead</h2>
+
+            <p><strong>Nome:</strong> <span id="modal-nome"></span></p>
+            <p><strong>E-mail:</strong> <span id="modal-email"></span></p>
+            <p><strong>Telefone:</strong> <span id="modal-telefone"></span></p>
+
+            <hr>
+
+            <p><strong>Serviço solicitado:</strong> <span id="modal-servico"></span></p>
+            <p><strong>Mensagem:</strong></p>
+            <p id="modal-mensagem"></p>
+
+            <hr>
+
+            <p><strong>Status atual:</strong> <span id="modal-status"></span></p>
+            <p><strong>Data de criação:</strong> <span id="modal-data"></span></p>
+
+            <hr>
+
+            <label for="modal-observacao">Observação:</label>
+            <textarea id="modal-observacao" rows="3"></textarea>
+            <button id="btn-salvar-observacao">Salvar observação</button>
+
+            <br><br>
+
+            <button id="btn-fechar-modal">↩ Voltar para lista</button>
+        </div>
+    </div>
+
+    <script src="assets/js/leads.js"></script>
 </body>
 
 </html>

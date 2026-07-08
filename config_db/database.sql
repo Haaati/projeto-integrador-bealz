@@ -34,7 +34,6 @@ ADMINISTRADORES
 --(6, 'Posts para Redes');
 
 
-
 /* ===========================
 leads
 =========================== */
@@ -45,13 +44,13 @@ leads
 --    `nome` VARCHAR(100) NOT NULL,
 --    `email` VARCHAR(256) NOT NULL,
 --    `telefone` VARCHAR(14) NOT NULL,
---    `servicos` INT NOT NULL,
+--    `servico_id` INT NOT NULL,
 --    `mensagem` TEXT NOT NULL,
 --    PRIMARY KEY (`id`),
 --    UNIQUE KEY `email` (`email`),
---    KEY `servicos_fk_idx` (`servicos`),
+--    KEY `servicos_fk_idx` (`servico_id`),
 --    CONSTRAINT `servicos_fk`
---        FOREIGN KEY (`servicos`)
+--        FOREIGN KEY (`servico_id`)
 --        REFERENCES `servicos` (`id`)
 --)
 
