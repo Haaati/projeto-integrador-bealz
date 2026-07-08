@@ -1,3 +1,20 @@
+/* ===== BOTÃO BASE ===== */
+
+.btn {
+    padding: 9px 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    transition: .2s;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
 /* ===== MODAL OVERLAY (fundo + posicionamento) ===== */
 
 .modal-overlay {
@@ -6,20 +23,39 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .modal-conteudo {
-    background: #1c1c28;
-    border-radius: 12px;
-    padding: 24px;
+    background: #11111A;
+    color: #f1f1f1;
+    border: 1px solid #24243A;
+    border-radius: 14px;
+    padding: 24px 32px;
     width: 100%;
     max-width: 480px;
     max-height: 90vh;
     overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.modal-conteudo h2 {
+    margin: 0 0 20px 0;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    border-bottom: 1px solid #24243A;
+    padding-bottom: 12px;
 }
 
 
@@ -28,7 +64,7 @@
 .modal-conteudo label {
     display: block;
     font-size: 13px;
-    color: #a9a9c2;
+    color: #a1a1aa;
     font-weight: 600;
     margin-bottom: 6px;
     margin-top: 14px;
@@ -38,13 +74,13 @@
 .modal-conteudo input[type="email"],
 .modal-conteudo input[type="url"] {
     width: 100%;
-    background: #26263a;
-    border: 1px solid #3a3a4d;
+    background: #15151d;
+    border: 1px solid #24243A;
     border-radius: 8px;
     color: #f1f1f1;
     padding: 10px 12px;
     font-size: 14px;
-    font-family: inherit;
+    font-family: "Inter", sans-serif;
     box-sizing: border-box;
 }
 
@@ -56,42 +92,42 @@
 .modal-conteudo input:focus,
 .modal-conteudo select:focus {
     outline: none;
-    border-color: #7c6ff2;
+    border-color: #8B5CF6;
+    box-shadow: 0 0 12px rgba(139, 92, 246, .15);
 }
 
 .modal-conteudo select {
     width: 100%;
-    background: #26263a;
-    border: 1px solid #3a3a4d;
+    background: #15151d;
+    border: 1px solid #24243A;
     border-radius: 8px;
     color: #f1f1f1;
     padding: 10px 12px;
     font-size: 14px;
-    font-family: inherit;
+    font-family: "Inter", sans-serif;
     box-sizing: border-box;
 }
 
 #btn-confirmar-converter {
-    background: #7c6ff2;
+    background: linear-gradient(135deg, #7644E6, #e759a0);
     color: #ffffff;
-    border: none;
     border-radius: 8px;
     padding: 10px 18px;
     font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
     width: 100%;
     margin-bottom: 8px;
+    box-shadow: 0px 4px 15px rgba(105, 45, 133, 0.35);
 }
 
 #btn-confirmar-converter:hover {
-    opacity: 0.9;
+    opacity: 0.92;
+    transform: translateY(-1px);
 }
 
 #btn-fechar-converter {
     background: transparent;
-    color: #a9a9c2;
-    border: 1px solid #3a3a4d;
+    color: #a1a1aa;
+    border: 1px solid #24243A;
     border-radius: 8px;
     padding: 10px 18px;
     font-size: 14px;
@@ -101,12 +137,12 @@
 }
 
 #btn-fechar-converter:hover {
-    background: #26263a;
+    background: #24243A;
     color: #ffffff;
 }
 
 
-/* ===== SCROLLBAR DO MODAL (a "barra lateral feia") ===== */
+/* ===== SCROLLBAR DO MODAL ===== */
 .modal-conteudo::-webkit-scrollbar {
     width: 8px;
 }
@@ -116,29 +152,28 @@
 }
 
 .modal-conteudo::-webkit-scrollbar-thumb {
-    background: #3a3a4d;
+    background: #24243A;
     border-radius: 8px;
 }
 
 .modal-conteudo::-webkit-scrollbar-thumb:hover {
-    background: #7c6ff2;
+    background: #8B5CF6;
 }
 
 .modal-conteudo {
     scrollbar-width: thin;
-    scrollbar-color: #3a3a4d transparent;
+    scrollbar-color: #24243A transparent;
 }
 
 
-/* ===== BOTÃO EXCLUIR LEAD ===== */
+/* ===== BOTÃO EXCLUIR ===== */
 .btn-delete {
     background: #e05263;
     color: #ffffff;
-    border: none;
 }
 
 .btn-delete:hover {
-    opacity: 0.85;
+    background: #c73f50;
 }
 
 
@@ -148,69 +183,83 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 20px;
 }
 
 .search-box {
+    width: 100%;
     display: flex;
-    gap: 10px;
+    flex-direction: row;
+    max-width: 750px;
+    gap: 1rem;
 }
 
 .search-box input {
-    background: #1c1c28;
-    border: 1px solid #2e2e3d;
-    border-radius: 8px;
-    padding: 10px 14px;
-    color: #f1f1f1;
-    font-size: 14px;
-    min-width: 260px;
+    width: 100%;
+    padding: 5px 16px;
+    background: #15151d;
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 12px;
+    color: #fff;
+    font-size: .95rem;
+    font-family: "Inter", sans-serif;
+    outline: none;
+    transition: .2s;
 }
 
 .search-box input:focus {
-    outline: none;
-    border-color: #7c6ff2;
+    border-color: #8B5CF6;
+    box-shadow: 0 0 12px rgba(139, 92, 246, .15);
 }
 
 .btn-search {
-    background: #7c6ff2;
+    background: linear-gradient(135deg, #7644E6, #e759a0);
     color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 18px;
-    font-weight: 600;
-    cursor: pointer;
+    font-size: 0.87rem;
+    box-shadow: 0px 4px 15px rgba(105, 45, 133, 0.35);
+}
+
+.btn-search:hover {
+    transform: translateY(-2px);
 }
 
 .btn-clear {
-    background: transparent;
-    color: #a9a9c2;
-    border: 1px solid #2e2e3d;
-    border-radius: 8px;
-    padding: 10px 18px;
-    font-weight: 600;
-    text-decoration: none;
+    font-size: 0.87rem;
     display: inline-flex;
     align-items: center;
+    text-decoration: none;
+    background: #24243A;
+    color: #fff;
+}
+
+.btn-clear:hover {
+    background: #32324a;
 }
 
 .lead-counter {
-    color: #a9a9c2;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #a1a1aa;
+    white-space: nowrap;
     font-size: 14px;
 }
 
 .lead-counter strong {
     color: #ffffff;
-    font-size: 18px;
-    margin-left: 6px;
+    font-size: 1.1rem;
 }
 
 .table-container {
-    background: #14141c;
-    border-radius: 12px;
-    padding: 10px;
+    background: #11111A;
+    border: 1px solid #24243A;
+    border-radius: 20px;
+    padding: 0;
+    overflow: hidden;
     overflow-x: auto;
+    transition: .2s ease;
 }
 
 .leads-table {
@@ -219,64 +268,78 @@
     color: #f1f1f1;
 }
 
+.leads-table thead {
+    background: #15151d;
+}
+
 .leads-table th {
     text-align: left;
-    padding: 14px 16px;
-    color: #a9a9c2;
-    font-size: 13px;
+    padding: 20px 18px;
+    color: #afafaf;
+    font-family: "Inter", sans-serif;
+    font-size: .78rem;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
-    border-bottom: 1px solid #2e2e3d;
+    letter-spacing: .08em;
+    border-bottom: 1px solid #24243A;
 }
 
 .leads-table td {
-    padding: 14px 16px;
-    border-bottom: 1px solid #22222f;
+    padding: 18px;
+    border-top: 1px solid rgba(255, 255, 255, .06);
     font-size: 14px;
+    color: #f4f4f5;
 }
 
-.leads-table tr:hover {
-    background: #1a1a26;
+.leads-table tbody tr {
+    transition: .2s ease;
+}
+
+.leads-table tbody tr:hover {
+    background: rgba(146, 146, 146, 0.07);
 }
 
 .status-select {
-    background: #26263a;
-    border: 1px solid #3a3a4d;
-    border-radius: 8px;
-    color: #f1f1f1;
-    padding: 8px 10px;
+    background: #1d1d27;
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 10px;
+    color: #fff;
+    padding: 8px 12px;
     font-size: 13px;
+    cursor: pointer;
+    outline: none;
+}
+
+.status-select:focus {
+    border-color: #8B5CF6;
 }
 
 .actions {
     display: flex;
-    gap: 8px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
-.btn {
-    border: none;
-    border-radius: 8px;
-    padding: 8px 14px;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
 .btn-save-status {
-    background: #3ba776;
+    font-size: 0.87rem;
+    background: #00693a;
     color: #ffffff;
 }
 
 .btn-save-status:hover {
-    opacity: 0.85;
+    transform: translateY(-2px);
+    background:#009150;
+    box-shadow:0 8px 20px rgba(6, 90, 52, 0.35);
 }
 
 .btn-edit {
-    background: #7c6ff2;
+    font-size: 0.87rem;
+    background: linear-gradient(135deg, #7644E6, #e759a0);
     color: #ffffff;
+    box-shadow: 0px 4px 15px rgba(105, 45, 133, 0.25);
 }
 
 .btn-edit:hover {
-    opacity: 0.85;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, .35);
 }

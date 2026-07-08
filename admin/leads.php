@@ -124,7 +124,7 @@ $subtituloPagina = "Gerencie todos os contatos recebidos pela landing page.";
 
                                 <button class="btn btn-save" data-id="<?= $lead['id']; ?>">Salvar</button>
 
-                                <button class="btn btn-delete" data-id="<?= $lead['id']; ?>">Excluir Lead</button>
+                                <button class="btn btn-delete" data-id="<?= $lead['id']; ?>">Excluir</button>
 
                                 <button class="btn btn-details" data-id="<?= $lead['id']; ?>">Detalhes</button>
 
