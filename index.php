@@ -438,7 +438,7 @@ include("config_db/conexao.php");
                     <div class="contato-info">
                         <div class="info-item">
                             <div class="icone">
-                                <a href="mailto:seuemail@email.com"><img src="assets/icons/email.svg" alt="Email"></a>
+                                <a href="mailto:seuemail@email.com" target="_blank" rel="noopener noreferrer"><img src="assets/icons/email.svg" alt="Email"></a>
                             </div>
                             <div>
                                 <span>Email</span>
@@ -449,7 +449,7 @@ include("config_db/conexao.php");
                         </div>
 
                         <div class="info-item">
-                            <div class="icone"> <a href="https://wa.me/41991073771"><img src="assets/icons/whatsapp.svg" alt="WhatsApp"></a></div>
+                            <div class="icone"> <a href="https://wa.me/41991073771" target="_blank" rel="noopener noreferrer"><img src="assets/icons/whatsapp.svg" alt="WhatsApp"></a></div>
                             <div>
                                 <span>WhatsApp</span>
                                 <a href="https://wa.me/41991073771" target="_blank" rel="noopener noreferrer">
@@ -469,7 +469,7 @@ include("config_db/conexao.php");
                         <div class="redes">
                             <h4>Redes Sociais</h4>
                             <div class="redes-icons">
-                                <a href="https://www.instagram.com/hey.bealz" target="_blank" rel="noopener noreferrer"">
+                                <a href="https://www.instagram.com/hey.bealz" target="_blank" rel="noopener noreferrer">
                                     <img src=" assets/icons/instagram.svg" alt="Instagram">
                                 </a>
                                 <a href="https://www.behance.net/beatrizkava" target="_blank" rel="noopener noreferrer">

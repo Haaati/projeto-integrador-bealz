@@ -198,8 +198,8 @@ nav a:hover::after {
     padding-top: 200px;
     background-color: #0D0D0D;
     background-image: radial-gradient(circle at 30% 40%,
-            rgba(90, 38, 173, 0.22) 0%,
-            rgba(0, 0, 0, 0.1) 25%,
+            #5a26ad38 0%,
+            #0000001a 25%,
             transparent 60%);
     background-repeat: no-repeat;
     background-position: 30% 40%;

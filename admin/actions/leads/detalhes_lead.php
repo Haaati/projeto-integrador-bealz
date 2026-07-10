@@ -16,6 +16,7 @@ $sql = "SELECT
             leads.telefone,
             leads.data_clientes,
             leads.mensagem,
+            leads.observacao,
             servicos.nome_servicos AS servico_nome,
             leads.servicos AS servico_id,
             leads.status_lead AS status_nome
