@@ -363,10 +363,7 @@ nav a:hover::after {
 }
 
 .sobre-conteudo h2 span {
-    background: linear-gradient(90deg,
-            #9670e7 0%,
-            #e690e9 55%,
-            #e280eb 100%);
+    background: #e690e9;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -430,11 +427,7 @@ nav a:hover::after {
 }
 
 .section-title h2 span {
-    background: linear-gradient(90deg,
-            /* cria o degradê */
-            #9670e7 0%,
-            #e690e9 55%,
-            #e280eb 100%);
+    background: #aa89f1;
     -webkit-background-clip: text;
     /* faz o fundo “entrar dentro da letra” */
     -webkit-text-fill-color: transparent;
@@ -526,7 +519,6 @@ nav a:hover::after {
 /* =========== Projetos =========== */
 
 .projetos {
-    padding: 60px 0;
     background-image: radial-gradient(circle at 50% 50%,
             rgba(104, 2, 95, 0.22) 0%,
             rgba(85, 0, 165, 0.1) 30%,
@@ -534,7 +526,7 @@ nav a:hover::after {
     background-repeat: no-repeat;
     background-position: 30% 40%;
     margin-top: 50px;
-    padding: 80px 0;
+    padding: 30px 0 150px;
 }
 
 .projetos-header {
@@ -985,10 +977,7 @@ nav a:hover::after {
 }
 
 .contato-header h2 span {
-    background: linear-gradient(90deg,
-            #9670e7 0%,
-            #e690e9 55%,
-            #e280eb 100%);
+    background: #d479f0;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
